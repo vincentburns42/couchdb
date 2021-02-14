@@ -1,2 +1,2 @@
 # couchdb
-Notes on playing with couchdb
+Notes on playing with couchdb with docker.
