@@ -67,7 +67,5 @@ Install python3 and the couchdb package:
 		couch.delete('test')
 
 	python main.py 
-
-	(venv) nan@nan-box:~/software/couchdb$ python main.py 
 	Writing to DB:  {'name': 'vinny'}
 	Reading from DB:  <Document '57933b7338a4c730ce0dc9cdc4004d62'@'1-155584ecfe1233194543a97695b04b19' {'name': 'vinny'}>
