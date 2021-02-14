@@ -5,16 +5,19 @@ Notes on playing with couchdb on a raspberry pi with docker.
 # Installation
 
 SSH into Rapsberry Pi, change password and update:
+
 	pi@raspberrypi:~ $ passwd 
 	pi@raspberrypi:~ $ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo reboot now
 
 Update the hostname:
+
 	pi@raspberrypi:~ $ sudo vi /etc/hostname
 	pi@raspberrypi:~ $ sudo cat /etc/hostname 
 	couchdb-home-one
 	pi@raspberrypi:~ $ sudo reboot
 
 Create a user, add to sudoers and limit ssh:
+
 	pi@couchdb-home-one:~ $ sudo adduser vinny
 	pi@couchdb-home-one:~ $ visudo 
 	pi@couchdb-home-one:~ $ sudo visudo 
@@ -26,10 +29,12 @@ Create a user, add to sudoers and limit ssh:
 	AllowUsers vinny
 
 Install docker:
+
 	vinny@couchdb-home-one:~ $ sudo sh get-docker.sh
 	vinny@couchdb-home-one:~ $ sudo usermod -aG docker vinny
 
 Create couchdb container:
+
 	vinny@couchdb-home-one:~ $ docker run -p 5984:5984 -d -e \
 	COUCHDB_USER=admin -e COUCHDB_PASSWORD=password treehouses/couchdb:2.3.0
 
