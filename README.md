@@ -42,10 +42,10 @@ Create couchdb container:
 
 Install python3 and the couchdb package:
 
-	python3 -m virtualenv venv
-	source venv/bin/activate
-	pip install couchdb
-	vim main.py 
+	vinny@laptop:~ $ python3 -m virtualenv venv
+	vinny@laptop:~ $ source venv/bin/activate
+	vinny@laptop:~ $ ip install couchdb
+	vinny@laptop:~ $ vim main.py 
 
 		import couchdb
 
@@ -66,6 +66,6 @@ Install python3 and the couchdb package:
 		# Delete DB
 		couch.delete('test')
 
-	python main.py 
+	vinny@laptop:~ $ python main.py 
 	Writing to DB:  {'name': 'vinny'}
 	Reading from DB:  <Document '57933b7338a4c730ce0dc9cdc4004d62'@'1-155584ecfe1233194543a97695b04b19' {'name': 'vinny'}>
