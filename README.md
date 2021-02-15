@@ -44,7 +44,7 @@ Install python3 and the couchdb package:
 
 	vinny@laptop:~ $ python3 -m virtualenv venv
 	vinny@laptop:~ $ source venv/bin/activate
-	vinny@laptop:~ $ ip install couchdb
+	vinny@laptop:~ $ pip install couchdb
 	vinny@laptop:~ $ vim main.py 
 
 		import couchdb
